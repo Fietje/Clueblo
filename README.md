@@ -18,5 +18,5 @@ Minigame Map for Minecraft Version 1.16.3
 ## Languages
 
 Clueblo supports the languages **English (US)** and **Deutsch (Deutschland)**.
-You can change them at the start of the map (for the static map parts) and directly inside your game under **Languages**
+You can change them at the start of the map (for the static map parts) and directly inside your game under **Languages** (for the dynamic parts).
 If you see strange text in chat, on items or on some signs you are using the wrong language or the resource pack is not selected correctly.
