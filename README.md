@@ -14,3 +14,9 @@ Minigame Map for Minecraft Version 1.16.3
  1. At the start of the map there is a button that when pressed explains all the rules.
  2. Apart of some small changes the rules are pretty much the same as normal Cluedo.
  3. If you want a small visual tutorial [watch this video](https://youtu.be/XM1lAUJjDo4).
+
+## Languages
+
+Clueblo supports the languages **English (US)** and **Deutsch (Deutschland)**.
+You can change them at the start of the map (for the static map parts) and directly inside your game under **Languages**
+If you see strange text in chat, on items or on some signs you are using the wrong language or the resource pack is not selected correctly.
