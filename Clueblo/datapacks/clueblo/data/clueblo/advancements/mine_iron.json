@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "mine_iron": {
+      "trigger": "minecraft:bee_nest_destroyed",
+      "conditions": {
+        "block": "minecraft:iron_ore",
+        "item": {
+          "item": "minecraft:wooden_axe"
+        }
+      }
+    }
+  },
+    "rewards": {
+        "function": "vain_miner:mine/iron"
+    }
+}

@@ -1,0 +1,19 @@
+# secret tunnels, secret tunnels, WUHU
+execute as @s[tag=!creat_suspicion,tag=OnSecret] unless block ~ 59 ~ minecraft:black_concrete run tag @s remove OnSecret
+execute if score @s[tag=!creat_suspicion,tag=!OnSecret] block_color matches 2 if block ~ 59 ~ minecraft:black_concrete run tellraw @s [{"translate":"clueblo.secret.question", "with":[{"translate":"clueblo.secret.way","color":"aqua"},{"translate":"clueblo.room.winter","color":"aqua"}],"color":"gray"},{"translate":"gui.yes","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger secret_tunnel"}},{"text":"/","color":"gray"},{"translate":"gui.no","color":"aqua"}]
+execute if score @s[tag=!creat_suspicion,tag=!OnSecret] block_color matches 4 if block ~ 59 ~ minecraft:black_concrete run tellraw @s [{"translate":"clueblo.secret.question", "with":[{"translate":"clueblo.secret.way","color":"aqua"},{"translate":"clueblo.room.work","color":"aqua"}],"color":"gray"},{"translate":"gui.yes","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger secret_tunnel"}},{"text":"/","color":"gray"},{"translate":"gui.no","color":"aqua"}]
+execute if score @s[tag=!creat_suspicion,tag=!OnSecret] block_color matches 6 if block ~ 59 ~ minecraft:black_concrete run tellraw @s [{"translate":"clueblo.secret.question", "with":[{"translate":"clueblo.secret.way","color":"aqua"},{"translate":"clueblo.room.salon","color":"aqua"}],"color":"gray"},{"translate":"gui.yes","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger secret_tunnel"}},{"text":"/","color":"gray"},{"translate":"gui.no","color":"aqua"}]
+execute if score @s[tag=!creat_suspicion,tag=!OnSecret] block_color matches 9 if block ~ 59 ~ minecraft:black_concrete run tellraw @s [{"translate":"clueblo.secret.question", "with":[{"translate":"clueblo.secret.way","color":"aqua"},{"translate":"clueblo.room.kitchen","color":"aqua"}],"color":"gray"},{"translate":"gui.yes","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger secret_tunnel"}},{"text":"/","color":"gray"},{"translate":"gui.no","color":"aqua"}]
+execute as @s[tag=!creat_suspicion,tag=!OnSecret] if block ~ 59 ~ minecraft:black_concrete run tag @s add OnSecret
+# convert trigger in real command
+execute as @s[tag=!creat_suspicion,scores={secret_tunnel=1..,block_color=2}] at @s if block ~ 59 ~ minecraft:black_concrete run function clueblo:room/secret_salon
+execute as @s[tag=!creat_suspicion,scores={secret_tunnel=1..,block_color=4}] at @s if block ~ 59 ~ minecraft:black_concrete run function clueblo:room/secret_kitchen
+execute as @s[tag=!creat_suspicion,scores={secret_tunnel=1..,block_color=6}] at @s if block ~ 59 ~ minecraft:black_concrete run function clueblo:room/secret_winter
+execute as @s[tag=!creat_suspicion,scores={secret_tunnel=1..,block_color=9}] at @s if block ~ 59 ~ minecraft:black_concrete run function clueblo:room/secret_workroom
+
+# if player has no more steps and is not inside a room end move
+execute if score @s[scores={steps=0},tag=!creat_suspicion] block_color matches 0..1 run function clueblo:move/init
+
+# if player inside room and have full suspicion start questioning
+execute as @s[tag=creat_suspicion] if score suspect helper matches 1.. if score room helper matches 1.. if score weapon helper matches 1.. run tellraw @a [{"text":"[","color":"gray"},{"selector":"@s","color":"aqua"},{"text":"]","color":"gray"},{"translate":"clueblo.suspicion.end", "with":[{"translate":"clueblo.suspicion.murder","color":"dark_red"}],"color":"gray"}]
+execute as @s[tag=creat_suspicion] if score suspect helper matches 1.. if score room helper matches 1.. if score weapon helper matches 1.. run function clueblo:questioning/init
