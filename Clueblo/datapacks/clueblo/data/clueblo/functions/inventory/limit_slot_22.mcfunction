@@ -4,8 +4,8 @@ clear @s minecraft:leather_helmet{filler22b:1b}
 clear @s minecraft:clock{filler22b:1b}
 execute as @s[tag=creat_suspicion] run scoreboard players add @s red_S 1
 execute as @s[tag=creat_suspicion] if score @s red_S matches 2.. run scoreboard players set @s red_S 0
-execute if score @s red_S matches 1 run replaceitem entity @s container.22 minecraft:leather_helmet{filler22b:1b,CustomModelData:15,display:{color:11546150,Name:'[{"translate":"clueblo.person.red","color":"dark_red"}]'}} 1
-execute if score @s red_S matches 0 run replaceitem entity @s container.22 minecraft:clock{filler22b:1b,CustomModelData:50,display:{Name:'[{"translate":"clueblo.person.red","color":"dark_red","strikethrough":"true"}]'}} 1
+execute if score @s red_S matches 1 run item replace entity @s container.22 with minecraft:leather_helmet{filler22b:1b,CustomModelData:15,display:{color:11546150,Name:'[{"translate":"clueblo.person.red","color":"dark_red"}]'}} 1
+execute if score @s red_S matches 0 run item replace entity @s container.22 with minecraft:clock{filler22b:1b,CustomModelData:50,display:{Name:'[{"translate":"clueblo.person.red","color":"dark_red","strikethrough":"true"}]'}} 1
 scoreboard players add @s red_S 1
 execute if score @s red_S matches 2.. run scoreboard players set @s red_S 0
 

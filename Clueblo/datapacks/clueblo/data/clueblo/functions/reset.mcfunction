@@ -159,7 +159,7 @@ schedule clear clueblo:sound_effects/corner_3
 schedule clear clueblo:sound_effects/corner_4
 stopsound @a 
 
-replaceitem entity @a armor.head minecraft:air
+item replace entity @a armor.head with minecraft:air 
 
 clear @a
 effect clear @a

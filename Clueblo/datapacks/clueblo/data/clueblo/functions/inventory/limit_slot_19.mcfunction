@@ -3,8 +3,8 @@ execute if data entity @s Inventory[{Slot:19b}] unless data entity @s Inventory[
 clear @s minecraft:clock{filler19b:1b}
 execute as @s[tag=creat_suspicion] run scoreboard players add @s green_S 1
 execute as @s[tag=creat_suspicion] if score @s green_S matches 2.. run scoreboard players set @s green_S 0
-execute if score @s green_S matches 1 run replaceitem entity @s container.19 minecraft:clock{filler19b:1b,CustomModelData:12,display:{Name:'[{"translate":"clueblo.person.green","color":"green"}]'}} 1
-execute if score @s green_S matches 0 run replaceitem entity @s container.19 minecraft:clock{filler19b:1b,CustomModelData:50,display:{Name:'[{"translate":"clueblo.person.green","color":"green","strikethrough":"true"}]'}} 1
+execute if score @s green_S matches 1 run item replace entity @s container.19 with minecraft:clock{filler19b:1b,CustomModelData:12,display:{Name:'[{"translate":"clueblo.person.green","color":"green"}]'}} 1
+execute if score @s green_S matches 0 run item replace entity @s container.19 with minecraft:clock{filler19b:1b,CustomModelData:50,display:{Name:'[{"translate":"clueblo.person.green","color":"green","strikethrough":"true"}]'}} 1
 scoreboard players add @s green_S 1
 execute if score @s green_S matches 2.. run scoreboard players set @s green_S 0
 

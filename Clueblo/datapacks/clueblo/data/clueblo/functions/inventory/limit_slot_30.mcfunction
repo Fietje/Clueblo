@@ -3,8 +3,8 @@ execute if data entity @s Inventory[{Slot:30b}] unless data entity @s Inventory[
 clear @s minecraft:clock{filler30b:1b}
 execute as @s[tag=creat_suspicion] run scoreboard players add @s rope_S 1
 execute as @s[tag=creat_suspicion] if score @s rope_S matches 2.. run scoreboard players set @s rope_S 0
-execute if score @s rope_S matches 1 run replaceitem entity @s container.30 minecraft:clock{filler30b:1b,CustomModelData:24,display:{Name:'[{"translate":"clueblo.weapon.rope","color":"#C4C4C4"}]'}} 1
-execute if score @s rope_S matches 0 run replaceitem entity @s container.30 minecraft:clock{filler30b:1b,CustomModelData:50,display:{Name:'[{"translate":"clueblo.weapon.rope","color":"#C4C4C4","strikethrough":"true"}]'}} 1
+execute if score @s rope_S matches 1 run item replace entity @s container.30 with minecraft:clock{filler30b:1b,CustomModelData:24,display:{Name:'[{"translate":"clueblo.weapon.rope","color":"#C4C4C4"}]'}} 1
+execute if score @s rope_S matches 0 run item replace entity @s container.30 with minecraft:clock{filler30b:1b,CustomModelData:50,display:{Name:'[{"translate":"clueblo.weapon.rope","color":"#C4C4C4","strikethrough":"true"}]'}} 1
 scoreboard players add @s rope_S 1
 execute if score @s rope_S matches 2.. run scoreboard players set @s rope_S 0
 

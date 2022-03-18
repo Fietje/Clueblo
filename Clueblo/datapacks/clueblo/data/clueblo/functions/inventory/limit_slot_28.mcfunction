@@ -3,8 +3,8 @@ execute if data entity @s Inventory[{Slot:28b}] unless data entity @s Inventory[
 clear @s minecraft:clock{filler28b:1b}
 execute as @s[tag=creat_suspicion] run scoreboard players add @s lighter_S 1
 execute as @s[tag=creat_suspicion] if score @s lighter_S matches 2.. run scoreboard players set @s lighter_S 0
-execute if score @s lighter_S matches 1 run replaceitem entity @s container.28 minecraft:clock{filler28b:1b,CustomModelData:22,display:{Name:'[{"translate":"clueblo.weapon.lantern","color":"#C4C4C4"}]'}} 1
-execute if score @s lighter_S matches 0 run replaceitem entity @s container.28 minecraft:clock{filler28b:1b,CustomModelData:50,display:{Name:'[{"translate":"clueblo.weapon.lantern","color":"#C4C4C4","strikethrough":"true"}]'}} 1
+execute if score @s lighter_S matches 1 run item replace entity @s container.28 with minecraft:clock{filler28b:1b,CustomModelData:22,display:{Name:'[{"translate":"clueblo.weapon.lantern","color":"#C4C4C4"}]'}} 1
+execute if score @s lighter_S matches 0 run item replace entity @s container.28 with minecraft:clock{filler28b:1b,CustomModelData:50,display:{Name:'[{"translate":"clueblo.weapon.lantern","color":"#C4C4C4","strikethrough":"true"}]'}} 1
 scoreboard players add @s lighter_S 1
 execute if score @s lighter_S matches 2.. run scoreboard players set @s lighter_S 0
 

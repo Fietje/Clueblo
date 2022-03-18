@@ -7,9 +7,9 @@ clear @s minecraft:netherite_helmet{filler103b:1b}
 clear @s minecraft:leather_helmet{filler103b:1b}
 clear @s minecraft:golden_helmet{filler103b:1b}
 
-replaceitem entity @s[tag=white] armor.head minecraft:iron_helmet{filler103b:1b,display:{Name:'[{"text":"Frau Weiß","color":"white","italic":"false"}]'}} 1
-replaceitem entity @s[tag=green] armor.head minecraft:turtle_helmet{filler103b:1b,display:{Name:'[{"text":"Reverend Grün","color":"green"}]'}} 1
-replaceitem entity @s[tag=blue] armor.head minecraft:diamond_helmet{filler103b:1b,display:{Name:'[{"text":"Baronin von Porz","color":"blue"}]'}} 1
-replaceitem entity @s[tag=purple] armor.head minecraft:netherite_helmet{filler103b:1b,display:{Name:'[{"text":"Prof. Bloom","color":"dark_purple"}]'}} 1
-replaceitem entity @s[tag=red] armor.head minecraft:leather_helmet{filler103b:1b,display:{color:11546150, Name:'[{"text":"Fräulein Gloria","color":"dark_red"}]'}} 1
-replaceitem entity @s[tag=yellow] armor.head minecraft:golden_helmet{filler103b:1b,display:{Name:'[{"text":"Oberst von Gatow","color":"yellow"}]'}} 1
+item replace entity @s[tag=white] armor.head with minecraft:iron_helmet{filler103b:1b,display:{Name:'[{"text":"Frau Weiß","color":"white","italic":"false"}]'}} 1
+item replace entity @s[tag=green] armor.head with minecraft:turtle_helmet{filler103b:1b,display:{Name:'[{"text":"Reverend Grün","color":"green"}]'}} 1
+item replace entity @s[tag=blue] armor.head with minecraft:diamond_helmet{filler103b:1b,display:{Name:'[{"text":"Baronin von Porz","color":"blue"}]'}} 1
+item replace entity @s[tag=purple] armor.head with minecraft:netherite_helmet{filler103b:1b,display:{Name:'[{"text":"Prof. Bloom","color":"dark_purple"}]'}} 1
+item replace entity @s[tag=red] armor.head with minecraft:leather_helmet{filler103b:1b,display:{color:11546150, Name:'[{"text":"Fräulein Gloria","color":"dark_red"}]'}} 1
+item replace entity @s[tag=yellow] armor.head with minecraft:golden_helmet{filler103b:1b,display:{Name:'[{"text":"Oberst von Gatow","color":"yellow"}]'}} 1

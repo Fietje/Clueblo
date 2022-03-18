@@ -29,7 +29,7 @@ execute as @a[tag=active_player,tag=red] run kill @e[type=minecraft:armor_stand,
 execute as @a[tag=active_player,tag=yellow] run kill @e[type=minecraft:armor_stand,tag=Yellow]
 
 # give player two dices
-replaceitem entity @a[tag=active_player,limit=1] container.8 minecraft:player_head{display:{Name:'{"translate":"clueblo.dice.name"}'},SkullOwner:{Id:[I;1719126018,-1744418856,-1189114273,1353348557],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmUyMmMyOThlN2M2MzM2YWYxNzkwOWFjMWYxZWU2ODM0YjU4YjFhM2NjOTlhYmEyNTVjYTdlYWViNDc2MTczIn19fQ=="}]}}} 2
+item replace entity @a[tag=active_player,limit=1] container.8 with minecraft:player_head{display:{Name:'{"translate":"clueblo.dice.name"}'},SkullOwner:{Id:[I;1719126018,-1744418856,-1189114273,1353348557],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmUyMmMyOThlN2M2MzM2YWYxNzkwOWFjMWYxZWU2ODM0YjU4YjFhM2NjOTlhYmEyNTVjYTdlYWViNDc2MTczIn19fQ=="}]}}} 2
 
 # summon armorstand if player has not rolled and teleport him back if he moves away without rolling
 execute as @a[tag=active_player,tag=white] at @s align xz run summon armor_stand ~0.5 78 ~0.5 {NoGravity:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,Tags:["White","PlayerHolderPre"],DisabledSlots:4144959}

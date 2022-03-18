@@ -47,7 +47,7 @@ tag @s remove questioned
 
 tag @s add PlayMusic
 
-replaceitem entity @s armor.head minecraft:air
+item replace entity @s armor.head with minecraft:air
 
 clear @s
 effect clear @s
